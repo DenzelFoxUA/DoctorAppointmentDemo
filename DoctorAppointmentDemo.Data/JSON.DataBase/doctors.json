@@ -1,0 +1,15 @@
+[
+  {
+    "DoctorSpeciality": 2,
+    "Experience": 10,
+    "Salary": 1.0,
+    "Id": 1,
+    "CreatedAt": "2024-10-21T19:41:13.7367911+03:00",
+    "UpdatedAt": "2024-10-21T19:41:13.7370727+03:00",
+    "Name": "Test",
+    "Surname": "Test",
+    "Age": 30,
+    "Phone": "0000000000",
+    "Email": "TEST.EMAIL"
+  }
+]

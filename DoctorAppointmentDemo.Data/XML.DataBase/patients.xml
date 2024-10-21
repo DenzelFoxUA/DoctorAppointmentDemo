@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patients>
+  <Patient xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>1</Id>
+    <CreatedAt>2024-10-21T17:41:42.054569+03:00</CreatedAt>
+    <UpdatedAt>2024-10-21T17:41:42.0579508+03:00</UpdatedAt>
+    <Name>Test</Name>
+    <Surname>Test</Surname>
+    <Age>40</Age>
+    <Phone>000000000</Phone>
+    <Email>TEST.com</Email>
+    <IllnessType>EyeDisease</IllnessType>
+    <AdditionalInfo>SOMETEST</AdditionalInfo>
+    <Address>DEFAULT</Address>
+  </Patient>
+</Patients>

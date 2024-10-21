@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Appointments>
+  <Appointment xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>1</Id>
+    <CreatedAt>2024-10-21T17:41:37.594613+03:00</CreatedAt>
+    <UpdatedAt>0001-01-01T00:00:00</UpdatedAt>
+    <PatientId>1</PatientId>
+    <DoctorId>1</DoctorId>
+    <DateTimeFrom>2024-10-21T14:41:37.5940769Z</DateTimeFrom>
+    <DateTimeTo>2024-10-21T15:41:37.594077Z</DateTimeTo>
+    <Description>Appointment 1</Description>
+  </Appointment>
+</Appointments>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Doctors>
+  <Doctor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>1</Id>
+    <CreatedAt>2024-10-21T17:41:42.0432074+03:00</CreatedAt>
+    <UpdatedAt>2024-10-21T17:41:42.044801+03:00</UpdatedAt>
+    <Name>Test</Name>
+    <Surname>Test</Surname>
+    <Age>30</Age>
+    <Phone>0000000000</Phone>
+    <Email>TEST.EMAIL</Email>
+    <DoctorSpeciality>Dermatologist</DoctorSpeciality>
+    <Experience>10</Experience>
+    <Salary>1</Salary>
+  </Doctor>
+</Doctors>

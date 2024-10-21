@@ -1,0 +1,15 @@
+[
+  {
+    "IllnessType": 1,
+    "AdditionalInfo": "SOMETEST",
+    "Address": "DEFAULT",
+    "Id": 1,
+    "CreatedAt": "2024-10-21T19:41:13.7396682+03:00",
+    "UpdatedAt": "2024-10-21T19:41:13.7399607+03:00",
+    "Name": "Test",
+    "Surname": "Test",
+    "Age": 40,
+    "Phone": "000000000",
+    "Email": "TEST.com"
+  }
+]
