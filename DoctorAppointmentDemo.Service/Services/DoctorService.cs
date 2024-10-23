@@ -1,4 +1,4 @@
-﻿using MyDoctorAppointment.Data.Configuration;
+﻿using DoctorAppointmentDemo.Data.DB_Services;
 using MyDoctorAppointment.Data.Interfaces;
 using MyDoctorAppointment.Data.Repositories;
 using MyDoctorAppointment.Domain.Entities;
@@ -11,7 +11,7 @@ namespace MyDoctorAppointment.Service.Services
     {
         private readonly IDoctorRepository _doctorRepository;
         
-        public DoctorService(string db_settingsFilePath, SourceDB source)
+        public DoctorService(string db_settingsFilePath, IManageDB_Sources source)
         {
             _doctorRepository = new DoctorRepository(db_settingsFilePath, source);
         }

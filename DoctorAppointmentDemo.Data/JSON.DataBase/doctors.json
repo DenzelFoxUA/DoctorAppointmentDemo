@@ -4,12 +4,38 @@
     "Experience": 10,
     "Salary": 1.0,
     "Id": 1,
-    "CreatedAt": "2024-10-21T19:41:13.7367911+03:00",
-    "UpdatedAt": "2024-10-21T19:41:13.7370727+03:00",
+    "CreatedAt": "2024-10-23T13:22:48.629829+03:00",
+    "UpdatedAt": "2024-10-23T13:22:48.6301936+03:00",
     "Name": "Test",
     "Surname": "Test",
     "Age": 30,
     "Phone": "0000000000",
     "Email": "TEST.EMAIL"
+  },
+  {
+    "DoctorSpeciality": 2,
+    "Experience": 20,
+    "Salary": 100000.0,
+    "Id": 3,
+    "CreatedAt": "2024-10-23T13:13:07.7566223+03:00",
+    "UpdatedAt": "2024-10-23T13:12:56.8382572+03:00",
+    "Name": "Semen",
+    "Surname": "Klemenko",
+    "Age": 50,
+    "Phone": "0500001122",
+    "Email": "SKlemenkoDoc@gmail.com"
+  },
+  {
+    "DoctorSpeciality": 4,
+    "Experience": 10,
+    "Salary": 50000.0,
+    "Id": 4,
+    "CreatedAt": "2024-10-23T13:14:41.2491605+03:00",
+    "UpdatedAt": "2024-10-23T13:14:13.4658597+03:00",
+    "Name": "Samantha",
+    "Surname": "Fox",
+    "Age": 30,
+    "Phone": "0507771122",
+    "Email": "SAMFOX@gmail.com"
   }
 ]

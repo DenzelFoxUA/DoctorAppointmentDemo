@@ -1,4 +1,5 @@
-﻿using MyDoctorAppointment.Data.Configuration;
+﻿using DoctorAppointmentDemo.Data.DB_Services;
+using MyDoctorAppointment.Data.Configuration;
 using MyDoctorAppointment.Data.Interfaces;
 using MyDoctorAppointment.Data.Repositories;
 using MyDoctorAppointment.Domain.Entities;
@@ -12,7 +13,7 @@ namespace MyDoctorAppointment.Service.Services
 
         public string DB_SettingsPath { get; init; }
 
-        public AppointmentService(string db_settingsFilePath, SourceDB source)
+        public AppointmentService(string db_settingsFilePath, IManageDB_Sources source)
         {
             DB_SettingsPath = db_settingsFilePath;
             _appointmentRepository = new AppointmentRepository(DB_SettingsPath, source);

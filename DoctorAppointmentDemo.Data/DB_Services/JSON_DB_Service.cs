@@ -7,10 +7,10 @@ using DoctorAppointmentDemo.Data.DB_Services;
 namespace MyDoctorAppointment.Data.DB_Services
 {
 
-    public class JSON_DB_Service : IDB_Service
+    public class JSON_DB_Service : IManageDB_Sources
     {
         
-        public static void ModifyId(DB_Entities entitiy, int value)
+        public void ModifyId(DB_Entities entitiy, int value)
         {
             JObject obj = JObject.Parse(File.ReadAllText(MyConstants.JSON_DB_SETTINGS_PATH));
             var dataBase = (JObject)obj[MyConstants.DB_NAME]!;
@@ -19,7 +19,7 @@ namespace MyDoctorAppointment.Data.DB_Services
             WriteToJSON(MyConstants.JSON_DB_SETTINGS_PATH, obj);
         }
 
-        public static IEnumerable<T> ReadAll<T>(string path, DB_Entities rootName = DB_Entities.None) where T : IAuditable<T>
+        public IEnumerable<T> ReadAll<T>(string path, DB_Entities rootName = DB_Entities.None) where T : IAuditable<T>
         {
             if (!File.Exists(path))
             {
@@ -37,7 +37,7 @@ namespace MyDoctorAppointment.Data.DB_Services
             return JsonConvert.DeserializeObject<List<T>>(json)!;
         }
 
-        public static void AppendObjectToBase<T>(string path, T obj, DB_Entities rootName = DB_Entities.None) where T : IAuditable<T>
+        public void AppendObjectToBase<T>(string path, T obj, DB_Entities rootName = DB_Entities.None) where T : IAuditable<T>
         {
             if (File.Exists(path) == true && obj is not null)
             {
@@ -45,7 +45,7 @@ namespace MyDoctorAppointment.Data.DB_Services
             }
         }
 
-        public static bool UpdateObject<T>(string path, T obj, int objId, DB_Entities rootName = DB_Entities.None) where T : IAuditable<T>
+        public bool UpdateObject<T>(string path, T obj, int objId, DB_Entities rootName = DB_Entities.None) where T : IAuditable<T>
         {
             if (File.Exists(path) == true && obj is not null)
             {
@@ -58,7 +58,7 @@ namespace MyDoctorAppointment.Data.DB_Services
                 
         }
 
-        public static bool RemoveFromDB<T>(string path, int id, DB_Entities rootName = DB_Entities.None) where T : IAuditable<T>
+        public bool RemoveFromDB<T>(string path, int id, DB_Entities rootName = DB_Entities.None) where T : IAuditable<T>
         {
             if (File.Exists(path) == true)
             {
@@ -82,7 +82,7 @@ namespace MyDoctorAppointment.Data.DB_Services
             
         }
 
-        public static T GetById<T>(string path, int id,
+        public T GetById<T>(string path, int id,
             DB_Entities rootName = DB_Entities.None) where T: IAuditable<T>
         {
             if(File.Exists(path) == true)

@@ -1,9 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Patients>
   <Patient xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>3</Id>
+    <CreatedAt>2024-10-23T13:24:57.9152573+03:00</CreatedAt>
+    <UpdatedAt>2024-10-23T13:24:57.9149257+03:00</UpdatedAt>
+    <Name>Max</Name>
+    <Surname>Payne</Surname>
+    <Age>40</Age>
+    <Phone>0661116661</Phone>
+    <Email>maxpayne@gmail.com</Email>
+    <IllnessType>Infection</IllnessType>
+    <AdditionalInfo>Headache</AdditionalInfo>
+    <Address>New York city, 13th street</Address>
+  </Patient>
+  <Patient xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>4</Id>
+    <CreatedAt>2024-10-23T13:24:58.0053098+03:00</CreatedAt>
+    <UpdatedAt>2024-10-23T13:24:58.0052756+03:00</UpdatedAt>
+    <Name>Brian</Name>
+    <Surname>Dawson</Surname>
+    <Age>40</Age>
+    <Phone>0664557712</Phone>
+    <Email>dawson@gmail.com</Email>
+    <IllnessType>EyeDisease</IllnessType>
+    <AdditionalInfo>Eye woonded</AdditionalInfo>
+    <Address>New York city, 15th street</Address>
+  </Patient>
+  <Patient xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <Id>1</Id>
-    <CreatedAt>2024-10-21T17:41:42.054569+03:00</CreatedAt>
-    <UpdatedAt>2024-10-21T17:41:42.0579508+03:00</UpdatedAt>
+    <CreatedAt>2024-10-23T13:25:35.4981594+03:00</CreatedAt>
+    <UpdatedAt>2024-10-23T13:25:35.4985929+03:00</UpdatedAt>
     <Name>Test</Name>
     <Surname>Test</Surname>
     <Age>40</Age>

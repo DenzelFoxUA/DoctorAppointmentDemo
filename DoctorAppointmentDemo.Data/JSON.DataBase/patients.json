@@ -4,12 +4,38 @@
     "AdditionalInfo": "SOMETEST",
     "Address": "DEFAULT",
     "Id": 1,
-    "CreatedAt": "2024-10-21T19:41:13.7396682+03:00",
-    "UpdatedAt": "2024-10-21T19:41:13.7399607+03:00",
+    "CreatedAt": "2024-10-23T13:22:48.7043999+03:00",
+    "UpdatedAt": "2024-10-23T13:22:48.704557+03:00",
     "Name": "Test",
     "Surname": "Test",
     "Age": 40,
     "Phone": "000000000",
     "Email": "TEST.com"
+  },
+  {
+    "IllnessType": 2,
+    "AdditionalInfo": "Headache",
+    "Address": "New York city, 13th street",
+    "Id": 3,
+    "CreatedAt": "2024-10-23T13:15:20.6426546+03:00",
+    "UpdatedAt": "2024-10-23T13:15:19.5323644+03:00",
+    "Name": "Max",
+    "Surname": "Payne",
+    "Age": 40,
+    "Phone": "0661116661",
+    "Email": "maxpayne@gmail.com"
+  },
+  {
+    "IllnessType": 1,
+    "AdditionalInfo": "Eye woonded",
+    "Address": "New York city, 15th street",
+    "Id": 4,
+    "CreatedAt": "2024-10-23T13:15:52.9204875+03:00",
+    "UpdatedAt": "2024-10-23T13:15:50.0874769+03:00",
+    "Name": "Brian",
+    "Surname": "Dawson",
+    "Age": 40,
+    "Phone": "0664557712",
+    "Email": "dawson@gmail.com"
   }
 ]

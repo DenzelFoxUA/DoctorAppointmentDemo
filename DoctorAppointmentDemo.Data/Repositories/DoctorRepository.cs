@@ -1,4 +1,5 @@
-﻿using MyDoctorAppointment.Data.Configuration;
+﻿using DoctorAppointmentDemo.Data.DB_Services;
+using MyDoctorAppointment.Data.Configuration;
 using MyDoctorAppointment.Data.Interfaces;
 using MyDoctorAppointment.Domain.Entities;
 using MyDoctorAppointment.Domain.Enums;
@@ -11,10 +12,11 @@ namespace MyDoctorAppointment.Data.Repositories
 
         public override int LastId { get; set; }
 
-        public DoctorRepository(string db_settingsFilePath, SourceDB source)
+        public DoctorRepository(string db_settingsFilePath, IManageDB_Sources source)
         {
             var result = DB_AppSettings(db_settingsFilePath);
-            SourceDB = source;
+            
+            IDBService = source;
             EntityName = DB_Entities.Doctors;
             Path = result.Database.Doctors.Path;
             LastId = result.Database.Doctors.LastId;

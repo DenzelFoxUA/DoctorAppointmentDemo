@@ -1,9 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Doctors>
   <Doctor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>3</Id>
+    <CreatedAt>2024-10-23T13:24:57.7083381+03:00</CreatedAt>
+    <UpdatedAt>2024-10-23T13:24:57.7078386+03:00</UpdatedAt>
+    <Name>Semen</Name>
+    <Surname>Klemenko</Surname>
+    <Age>50</Age>
+    <Phone>0500001122</Phone>
+    <Email>SKlemenkoDoc@gmail.com</Email>
+    <DoctorSpeciality>Dermatologist</DoctorSpeciality>
+    <Experience>20</Experience>
+    <Salary>100000</Salary>
+  </Doctor>
+  <Doctor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Id>4</Id>
+    <CreatedAt>2024-10-23T13:24:57.8854826+03:00</CreatedAt>
+    <UpdatedAt>2024-10-23T13:24:57.8849475+03:00</UpdatedAt>
+    <Name>Samantha</Name>
+    <Surname>Fox</Surname>
+    <Age>30</Age>
+    <Phone>0507771122</Phone>
+    <Email>SAMFOX@gmail.com</Email>
+    <DoctorSpeciality>Paramedic</DoctorSpeciality>
+    <Experience>10</Experience>
+    <Salary>50000</Salary>
+  </Doctor>
+  <Doctor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
     <Id>1</Id>
-    <CreatedAt>2024-10-21T17:41:42.0432074+03:00</CreatedAt>
-    <UpdatedAt>2024-10-21T17:41:42.044801+03:00</UpdatedAt>
+    <CreatedAt>2024-10-23T13:25:35.4561986+03:00</CreatedAt>
+    <UpdatedAt>2024-10-23T13:25:35.4565688+03:00</UpdatedAt>
     <Name>Test</Name>
     <Surname>Test</Surname>
     <Age>30</Age>

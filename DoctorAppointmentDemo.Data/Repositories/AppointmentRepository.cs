@@ -1,8 +1,6 @@
 ﻿using MyDoctorAppointment.Data.Interfaces;
-using MyDoctorAppointment.Data.DB_Services;
 using MyDoctorAppointment.Domain.Entities;
 using DoctorAppointmentDemo.Data.DB_Services;
-using Newtonsoft.Json;
 using MyDoctorAppointment.Data.Configuration;
 
 namespace MyDoctorAppointment.Data.Repositories
@@ -19,10 +17,10 @@ namespace MyDoctorAppointment.Data.Repositories
         public bool XRayProcedure { get; set; }
         //
 
-        public AppointmentRepository(string db_settingsPath, SourceDB source)
+        public AppointmentRepository(string db_settingsPath, IManageDB_Sources source)
         {
             var result = DB_AppSettings(db_settingsPath);
-            SourceDB = source;
+            IDBService = source;
             EntityName = DB_Entities.Appointments;
             Path = result.Database.Appointments.Path;
             LastId = result.Database.Appointments.LastId;

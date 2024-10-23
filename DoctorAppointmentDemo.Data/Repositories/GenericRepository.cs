@@ -12,9 +12,10 @@ namespace MyDoctorAppointment.Data.Repositories
     // за допомогою світч міняє сервіси джерел БД
     public abstract class GenericRepository<TSource> : IGenericRepository<TSource> where TSource : IAuditable<TSource>
     {
-        public SourceDB SourceDB { get; init; } // enum перечислення доступних джерел БД
 
         public DB_Entities EntityName { get; init; } // enum перечислення сутностей в структурі БД
+
+        public IManageDB_Sources IDBService { get; init; }
 
         public abstract string Path { get; set; }
 
@@ -25,11 +26,8 @@ namespace MyDoctorAppointment.Data.Repositories
             source.Id = ++LastId;
             source.CreatedAt = DateTime.Now;
 
-            switch (SourceDB)
-            {
-                case SourceDB.JSON: JSON_DB_Service.AppendObjectToBase(Path, source); break;
-                case SourceDB.XML: XML_DB_Service.AppendObjectToBase<TSource>(Path, source, EntityName); break;
-            }
+            IDBService.AppendObjectToBase(Path, source, EntityName);
+            
             SaveLastId();
 
             return source;
@@ -41,25 +39,17 @@ namespace MyDoctorAppointment.Data.Repositories
             if (GetById(id) is null)
                 return false;
 
-            switch (SourceDB)
-            {
-                case SourceDB.JSON: JSON_DB_Service.RemoveFromDB<TSource>(Path, id); break;
-                case SourceDB.XML: XML_DB_Service.RemoveFromDB<TSource>(Path, id, EntityName); break;
-            }
+                IDBService.RemoveFromDB<TSource>(Path, id,EntityName);
+                
             return true;
 
         }
 
         public IEnumerable<TSource> GetAll()
         {
-            switch (SourceDB)
-            {
-                case SourceDB.JSON: return JSON_DB_Service.ReadAll<TSource>(Path);
-                case SourceDB.XML: return XML_DB_Service.ReadAll<TSource>(Path, EntityName);
-                case SourceDB.SQL: break;
-                default: break;
-            }
-            return default!;
+            
+            return IDBService.ReadAll<TSource>(Path, EntityName);
+
         }
 
         public TSource? GetById(int id)
@@ -72,12 +62,7 @@ namespace MyDoctorAppointment.Data.Repositories
             source.UpdatedAt = DateTime.Now;
             source.Id = id;
 
-            switch (SourceDB)
-            {
-                case SourceDB.JSON: JSON_DB_Service.UpdateObject(Path, source, id); break;
-                case SourceDB.XML: XML_DB_Service.UpdateObject(Path, source, id, EntityName); break;
-            }
-
+            IDBService.UpdateObject(Path, source, id, EntityName);
             return source;
         }
 
@@ -85,11 +70,9 @@ namespace MyDoctorAppointment.Data.Repositories
 
         protected void SaveLastId()
         {
-            switch (SourceDB)
-            {
-                case SourceDB.JSON: JSON_DB_Service.ModifyId(EntityName, LastId); break;
-                case SourceDB.XML: XML_DB_Service.ModifyId(EntityName, LastId); break;
-            }
+            
+            IDBService.ModifyId(EntityName, LastId);
+
         }
 
         protected DB_Root DB_AppSettings(string db_settingsPath) 

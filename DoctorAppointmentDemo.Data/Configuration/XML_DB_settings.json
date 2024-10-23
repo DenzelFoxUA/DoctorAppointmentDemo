@@ -1,15 +1,1 @@
-{
-  "Database": {
-    "Doctors": {
-      "LastId": 0,
-      "Path": "..\\..\\..\\..\\DoctorAppointmentDemo.Data\\XML.DataBase\\doctors.xml"
-    },
-    "Patients": {
-      "LastId": 0,
-      "Path": "..\\..\\..\\..\\DoctorAppointmentDemo.Data\\XML.DataBase\\patients.xml"
-    },
-    "Appointments": {
-      "LastId": 0,
-      "Path": "..\\..\\..\\..\\DoctorAppointmentDemo.Data\\XML.DataBase\\appointments.xml"
-    }
-  }}
+{"Database":{"Doctors":{"LastId":4,"Path":"..\\..\\..\\..\\DoctorAppointmentDemo.Data\\XML.DataBase\\doctors.xml"},"Patients":{"LastId":4,"Path":"..\\..\\..\\..\\DoctorAppointmentDemo.Data\\XML.DataBase\\patients.xml"},"Appointments":{"LastId":3,"Path":"..\\..\\..\\..\\DoctorAppointmentDemo.Data\\XML.DataBase\\appointments.xml"}}}

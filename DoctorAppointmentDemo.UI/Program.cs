@@ -1,5 +1,7 @@
-﻿using DoctorAppointmentDemo.UI;
+﻿using DoctorAppointmentDemo.Data.DB_Services;
+using DoctorAppointmentDemo.UI;
 using MyDoctorAppointment.Data.Configuration;
+using MyDoctorAppointment.Data.DB_Services;
 using MyDoctorAppointment.Domain.Entities;
 using MyDoctorAppointment.Service.Interfaces;
 using MyDoctorAppointment.Service.Services;
@@ -22,13 +24,13 @@ namespace MyDoctorAppointment
         public DoctorAppointment()
         {
             DataStoragePath = MyConstants.JSON_DB_SETTINGS_PATH; //default storage
-            _doctorService = new DoctorService(DataStoragePath, SourceDB.JSON);
-            _patientService = new PatientService(DataStoragePath, SourceDB.JSON);
-            _appointmentService = new AppointmentService(DataStoragePath, SourceDB.JSON);
+            _doctorService = new DoctorService(DataStoragePath, new JSON_DB_Service());
+            _patientService = new PatientService(DataStoragePath, new JSON_DB_Service());
+            _appointmentService = new AppointmentService(DataStoragePath, new JSON_DB_Service());
 
         }
 
-        public DoctorAppointment(string db_settingsPath, SourceDB source)
+        public DoctorAppointment(string db_settingsPath, IManageDB_Sources source)
         {
             DataStoragePath = db_settingsPath;
             _doctorService = new DoctorService(DataStoragePath, source);
@@ -59,22 +61,31 @@ namespace MyDoctorAppointment
             int.TryParse(input, out choise);
 
 
-            SourceDB source = (SourceDB)choise;
+            SourceDB sourceChoise = (SourceDB)choise;
 
+            IManageDB_Sources source = null;
 
-            switch (source)
+            switch (sourceChoise)
             {
-                case SourceDB.JSON: dataSource = MyConstants.JSON_DB_SETTINGS_PATH; break;
-                case SourceDB.XML: dataSource = MyConstants.XML_DB_SETTINGS_PATH; break;
+                case SourceDB.JSON: dataSource = MyConstants.JSON_DB_SETTINGS_PATH; source = new JSON_DB_Service(); break;
+                case SourceDB.XML: dataSource = MyConstants.XML_DB_SETTINGS_PATH; source = new XML_DB_Service(); break;
             }
 
 
+            if(source is not null)
+            {
+                var doctorAppointment = new DoctorAppointment(dataSource, source);
+                //doctorAppointment.Run();
 
-            var doctorAppointment = new DoctorAppointment(dataSource, source);
-            //doctorAppointment.Run();
-
-            TestBlock test = new TestBlock(doctorAppointment);
-            test.RunTestBlock();
+                TestBlock test = new TestBlock(doctorAppointment);
+                test.RunTestBlock();
+            }
+            else
+            {
+                Console.WriteLine("Source must be chosen correctly! Try again");
+                Console.ReadLine();
+            }
+            
         }
     }
 }

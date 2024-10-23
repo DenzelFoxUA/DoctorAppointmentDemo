@@ -1,9 +1,15 @@
-﻿using MyDoctorAppointment.Domain.Interfaces;
+﻿using DoctorAppointmentDemo.Data.DB_Services;
+using MyDoctorAppointment.Data.Configuration;
+using MyDoctorAppointment.Domain.Interfaces;
 
 namespace MyDoctorAppointment.Data.Interfaces
 {
     public interface IGenericRepository<TSource> where TSource : IAuditable<TSource>
     {
+
+        public DB_Entities EntityName { get; init; }
+
+        public IManageDB_Sources IDBService { get; init; }
 
         TSource Create(TSource source);
 
